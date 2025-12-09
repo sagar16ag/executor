@@ -1,0 +1,13 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: executor
+# Add other necessary configuration properties below as needed
+# For example, database, logging, etc.
+# logging:
+#   level:
+#     root: INFO
+#   file:
+#     name: logs/executor.log
+
