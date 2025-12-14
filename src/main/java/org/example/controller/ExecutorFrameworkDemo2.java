@@ -16,6 +16,11 @@ public class ExecutorFrameworkDemo2 {
         SimpleTask(int id) { this.id = id; }
         @Override
         public void run() {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
             System.out.println("[SimpleTask] Executing task " + id + " on " + Thread.currentThread().getName());
         }
     }
@@ -55,7 +60,7 @@ public class ExecutorFrameworkDemo2 {
         // 1. Fixed Thread Pool
         // ------------------------------------------------------
         ExecutorService fixedPool = Executors.newFixedThreadPool(3);
-        for(int i = 1; i <= 50; i++)
+        for(int i = 1; i <= 10; i++)
             fixedPool.execute(new SimpleTask(i));
 
         // ------------------------------------------------------
