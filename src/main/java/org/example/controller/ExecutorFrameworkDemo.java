@@ -79,8 +79,7 @@ public class ExecutorFrameworkDemo {
 //        } catch (InterruptedException e) {
 //            Thread.currentThread().interrupt();
 //        }
-
-        scheduler.shutdown();
+//        scheduler.shutdown();
     }
 
     // ---------------------------------------
